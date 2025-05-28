@@ -1,0 +1,787 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&amp;family=Varela+Round&amp;display=swap"
+        rel="stylesheet">
+    <style type="text/css">
+        /* header css */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-weight: 300;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .banner {
+            width: 100%;
+            height: 30vw;
+            background-color: #f1f1f1;
+        }
+
+        .banner .heading {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+        }
+
+        .heading h1 {
+            font-size: 3vw;
+        }
+
+        .heading span {
+            color: #f77c25;
+            font-size: 1.3vw;
+        }
+
+        .row {
+            width: 100%;
+            height: 100%;
+            padding: 0vw 7vw;
+        }
+
+        .navbar .row {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 1vw 7vw;
+            background-color: #f7f7f7;
+            box-shadow: 0 0 10px 0 #d9d9d9;
+        }
+
+        .navbar .logo {
+            width: 50%;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo img {
+            width: 20vw;
+        }
+
+        .container-1 {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar .logo img {
+                width: 40vw;
+            }
+
+            .navbar .menu {
+                display: none;
+            }
+
+            .navbar .menu {
+                display: none;
+            }
+
+            .banner {
+                height: 50vw;
+                background-color: #e7e7e7;
+                background-image: none;
+            }
+
+            .heading span {
+                font-size: 12px;
+            }
+
+            .heading h1 {
+                font-size: 19px;
+            }
+        }
+
+        ::ng-deep {
+            .app-main div.mainBody {
+                margin: 0 !important;
+            }
+        }
+
+        /* actual body content css */
+        .rightcontent h2 {
+            font-size: 24px;
+            font-weight: 400;
+            padding-bottom: 1.5vw;
+        }
+
+        .rightcontent .subhead {
+            font-size: 18px;
+            padding-bottom: 1vw;
+        }
+
+        .rightcontent h3 {
+            font-size: 18px !important;
+            font-weight: 400;
+        }
+
+        .rightcontent p {
+            font-size: 18px !important;
+            font-weight: 300 !important;
+        }
+
+        .rightcontent h4 {
+            font-size: 18px;
+            font-weight: 400;
+            padding-bottom: 0.5vw;
+        }
+
+        .rightcontent ul {
+            padding-left: 2vw;
+        }
+
+        .rightcontent li {
+            font-size: 18px;
+            font-weight: 300;
+            padding-bottom: 1vw;
+        }
+
+        .rightcontent {
+            width: 100%;
+        }
+
+        .container-1 {
+            width: 100%;
+            height: 100%;
+        }
+
+        .row {
+            width: 100%;
+            height: 100%;
+            padding: 0vw 7vw;
+        }
+
+        .menu h4 a {
+            text-decoration: none;
+            color: #333333;
+            font-weight: 300;
+        }
+
+        .heading {
+            h1 {
+                font-size: 3vw;
+            }
+
+            span {
+                color: #f77c25;
+                font-size: 1.3vw;
+            }
+        }
+
+        .content {
+            width: 100%;
+            height: 100%;
+            padding: 2vw 0;
+            background-color: white;
+        }
+
+        .maincontent {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            gap: 3vw;
+
+            h3 {
+                font-size: 1.8vw;
+                padding-bottom: 1vw;
+            }
+
+            p {
+                font-size: 1.1vw;
+                padding-bottom: 2vw;
+            }
+        }
+
+        .leftcontent {
+            width: 50%;
+
+            .con {
+                display: flex;
+                flex-direction: column;
+                padding: 1vw;
+                background: aliceblue;
+            }
+
+            .con a {
+                font-size: 20px;
+                color: #3a3a3a;
+                text-decoration: none;
+                font-weight: 300;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .maincontent h3 {
+                font-size: 18px !important;
+                padding-bottom: 3vw;
+            }
+
+            .maincontent {
+                display: block;
+            }
+
+            .leftcontent {
+                display: none;
+            }
+
+            .maincontent p {
+                font-size: 18px !important;
+                padding-bottom: 4vw;
+            }
+        }
+
+
+        /* footer css */
+        .footer {
+            width: 100%;
+            background-color: #f77c25;
+            padding: 1vw 0;
+        }
+
+        .footer .bottomrow {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .footer {
+                padding: 2vw 0;
+            }
+        }
+    </style>
+</head>
+
+<body style="margin: 0; padding: 0">
+    <!-- header -->
+    <section class="navbar">
+        <div class="container-1">
+            <div class="row">
+                <div class="logo">
+                    <img src="./assets/images/HealthTrackSG.png" alt="" srcset="" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- sub-header -->
+    <section class="banner">
+        <div class="container-1">
+            <div class="row">
+                <div class="heading">
+                    <span>Terms of Service</span>
+                    <h1>HealthTrack SG Terms & Conditions</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- actual body content -->
+    <section class="content">
+        <div class="container-1">
+            <div class="row">
+                <div class="maincontent">
+                    <div class="leftcontent">
+                        <div class="con">
+                            <a href="#terms-and-conditions">Terms And Conditions</a>
+                            <a href="#definitions">– Definitions</a>
+                            <a href="#restrictions-on-use-of-website">
+                                – Restrictions On Use Of Website</a>
+                            <a href="#intellectual-property">– Intellectual Property</a>
+                            <a href="#product-availability">– Product Availability</a>
+                            <a href="#not-advice">– Not Advice Or Offer Or Solicitation</a>
+                            <a href="#no-warranties">– No Warranties</a>
+                            <a href="#confidential-information">– Confidential Information</a>
+                            <a href="#restrictions-on-use-of-materials">
+                                – Restrictions On Use Of Materials</a>
+                            <a href="#sending-of-messages">– Sending Of Messages</a>
+                            <a href="#liability">– Liability</a>
+                            <a href="#acts-by-any-person">
+                                – Acts By Any Person On Your Behalf</a>
+                            <a href="#hyperlinking">– Hyperlinking</a>
+                            <a href="#termination">– Termination</a>
+                            <a href="#what-personal-information-is-collected">
+                                – What Personal Information Is Collected</a>
+                            <a href="#use-of-cookies">– Use Of Cookies</a>
+                            <a href="#disclosure-of-personal-information">
+                                – Disclosure Of Personal Information</a>
+                            <a href="#security-of-personal-information">
+                                – Security of Personal Information</a>
+                            <a href="#marketing">– Marketing</a>
+                        </div>
+                    </div>
+                    <div class="rightcontent">
+                        <div class="head1" id="terms-and-conditions">
+                            <h3>Terms and Conditions</h3>
+                            <p>Last Updated: May 2025</p>
+                            <h3>
+                                YOU SHOULD READ ALL OF THE TERMS AND CONDITIONS CAREFULLY BEFORE
+                                YOU USE THE WEBSITE AS YOU WILL BE LEGALLY BOUND BY THEM
+                            </h3>
+                            <p>
+                                The following Terms and Conditions govern your use of this
+                                Website. Your access to and use of the Website constitutes your
+                                acceptance of these Terms and Conditions. These Terms and
+                                Conditions are applicable only to persons accessing the Website.
+                                There may be separate terms and conditions that apply if you
+                                access other pages or follow links from the Website. It is your
+                                responsibility to check and read such terms and conditions where
+                                applicable. The Company may, from time to time, without prior
+                                notice, make amendments to these Terms and Conditions. You are
+                                legally bound by such revisions and should, at regular intervals,
+                                visit this page to read the latest version of the Terms and
+                                Conditions which become controlling when posted on the Website.
+                            </p>
+                            <h4>Governing Law</h4>
+                            <p>
+                                These Terms of Use shall be governed by and construed in
+                                accordance with the laws of the Republic of Singapore.
+                            </p>
+                        </div>
+                        <div class="head2" id="definitions">
+                            <h2>Definitions</h2>
+                            <p>
+                                The following words and phrases will have the meanings set
+                                opposite them unless the context indicates otherwise:
+                            </p>
+                            <p>
+                                <b>Company</b>, <b>us</b> or <b>we</b> means ConnectedLife Pte
+                                Ltd.
+                            </p>
+                            <p><b>Confidential Information</b> means:</p>
+                            <ul>
+                                <li>
+                                    Information relating to the Company, its customers (including
+                                    Personal Information and financial information) or its business
+                                    which is disclosed to (or is otherwise acquired by) you, your
+                                    employees, agents or contractors, by or on behalf of the
+                                    Company, and which is not publicly available; and
+                                </li>
+                                <li>
+                                    All other information disclosed in circumstances which a
+                                    reasonable person would consider to be confidential.
+                                </li>
+                            </ul>
+                            <p><b>Customer</b> means a user of the Website.</p>
+                            <p>
+                                <b>Material</b> means articles, data, reports, opinions, documents
+                                and other information or material including images, videos and
+                                graphics posted and/or made available on the Website by the
+                                Company from time to time.
+                            </p>
+                            <p>
+                                <b>Messages</b> include all directions or requests communicated
+                                from time to time electronically between you and the Company.
+                            </p>
+                            <p>
+                                <b>Personal Data</b> means personal data as defined under the
+                                Personal Data Protection Act 2012.
+                            </p>
+                            <p>
+                                <b>Personal Information</b> means all information including
+                                Personal Data, health and financial information provided by you to
+                                the Company from time to time.
+                            </p>
+                            <p>
+                                <b>Person or Persons</b> shall be deemed to include an individual
+                                or other legal entities or bodies, corporate or unincorporate.
+                            </p>
+                            <p>
+                                <b>Terms and Conditions</b> means the terms and conditions in the
+                                Website and Additional Terms and Conditions as may be applicable
+                                and / or amended, varied, or modified from time to time.
+                            </p>
+                            <p>
+                                <b>Website</b> means the applicable website listed here,
+                                accessible by the domain name set opposite it:
+                            </p>
+                            <ul>
+                                <li>The website at https://connectedlife.io/</li>
+                            </ul>
+                            <p>
+                                <b>You</b> means the Customer save where indicated otherwise and
+                                your has a corresponding meaning.
+                            </p>
+                        </div>
+                        <div class="head3" id="restrictions-on-use-of-website">
+                            <h3>Restrictions On Use Of Website</h3>
+                            <p><b>You:</b></p>
+                            <ul>
+                                <li>
+                                    Must not use or act on or through the Website, directly or
+                                    indirectly, to commit any crimes;
+                                </li>
+                                <li>
+                                    Must not act on or through the Website so as to interfere with
+                                    or disrupt Internet users, service providers, or their
+                                    computers, software or hardware. Such actions include, but are
+                                    not limited to, the circulation of any unsolicited publicity or
+                                    advertising material, propagation of computer worms or viruses,
+                                    using the Website to gain unauthorised access to any other
+                                    computer, sending harassing, obscene, indecent, offensive or
+                                    threatening electronic mail, forgery (or attempted forgery) and
+                                    creation of false electronic mail messages or websites and the
+                                    replacement, transmission or storage of any defamatory material
+                                    on the Internet;
+                                </li>
+                                <li>
+                                    Must not access, or permit any other party to access, the
+                                    Website for any purpose or activity of an illegal, fraudulent or
+                                    defamatory nature;
+                                </li>
+                                <li>
+                                    Agree not to reproduce, frame, transmit, broadcast, adapt,
+                                    modify, reverse assemble or reverse decompile the Website, or
+                                    any of its component parts;
+                                </li>
+                                <li>
+                                    Must comply strictly with these Terms and Conditions and all
+                                    other directions issued from time to time by the Company
+                                    relating to your access and use of the Website; and
+                                </li>
+                                <li>
+                                    Warrant that in accessing and using the Website, you will not
+                                    breach any law or code, including without limitation, any
+                                    copyrights, patents, trade secrets, confidential information or
+                                    other intellectual property rights belonging to us or any other
+                                    person and any law or code (where applicable) relating to the
+                                    collection, use, disclosure and protection of Personal
+                                    Information.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="head4" id="intellectual-property">
+                            <h3>Intellectual Property</h3>
+                            <p>
+                                Unless labelled to the contrary, the Company owns or uses under
+                                licence all intellectual property rights in all works and Material
+                                on this Website. You must not remove or modify any notices of
+                                attribution or copyright. The Website contains names and logos
+                                which are registered and unregistered trademarks of HealthTrack
+                                SG. Any use of the trademarks including names and logos, without
+                                our prior approval, would constitute an infringement of these
+                                trademarks and is strictly prohibited. Nothing contained in this
+                                Website should be construed as conferring, by implication,
+                                estoppel or otherwise, a licence or right to use any of the
+                                trademarks.
+                            </p>
+                        </div>
+                        <div class="head5" id="product-availability">
+                            <h3>Product Availability</h3>
+                            <p>
+                                Products or services detailed on the Website are only available to
+                                persons in certain named countries. Your local legislation may not
+                                permit us to offer products or services to you in your own
+                                country. We reserve the right to determine the eligibility of any
+                                user for any product or service.
+                            </p>
+                        </div>
+                        <div class="head6" id="not-advice">
+                            <h3>Not Advice or Offer or Solicitation</h3>
+                            <p>
+                                The Material on the Website is of a general nature and for
+                                information only and is not intended to be advice or an offer or
+                                solicitation to sell any product or service. Accordingly, you
+                                should assess whether the Material is appropriate in the light of
+                                your individual circumstances, and/or the individual circumstances
+                                of any person you are acting for, before acting or advising on the
+                                Material.
+                            </p>
+                        </div>
+                        <div class="head7" id="no-warranties">
+                            <h3>No Warranties</h3>
+                            <p>
+                                The Website is provided on an “as is” and “as available” basis. To
+                                the extent permitted under applicable law, all warranties of any
+                                kind, whether express or implied including but not limited to
+                                implied warranties of merchantability, satisfactory quality,
+                                fitness for a particular purpose, title and non-infringement of
+                                third party rights are disclaimed. The Material may incorporate
+                                information obtained from third parties (including but not limited
+                                to unit prices), the accuracy of which may not have been
+                                established by the Company. The Company gives no warranty as to
+                                the accuracy, timeliness, adequacy or completeness of the
+                                Material, and accepts no responsibility for any errors or
+                                omissions in the Material however arising (including but not
+                                limited to errors or omissions arising as a result of the
+                                negligence of the Company, its directors, employees, agents or
+                                representatives).
+                                <br />
+                                If you are dissatisfied with any portion of the Website, or with
+                                any of these Terms and Conditions, please discontinue using the
+                                Website.
+                            </p>
+                        </div>
+                        <div class="head8" id="confidential-information">
+                            <h3>Confidential information</h3>
+                            <p>You acknowledge that:</p>
+                            <ul>
+                                <li>
+                                    In accessing the Website or the Material, you may acquire
+                                    Confidential Information from the Company;
+                                </li>
+                                <li>
+                                    The Confidential Information comprises information that is
+                                    valuable and may cause serious damage and loss (including to
+                                    third parties) if it is improperly disclosed or used.
+                                </li>
+                            </ul>
+                            <p>
+                                You must hold all Confidential Information in confidence and may
+                                not make any use of it except for the purposes of, or as
+                                authorised under, these Terms and Conditions (or as otherwise
+                                approved by the Company), and may not disclose or permit or cause
+                                the Confidential Information to be disclosed to any person except
+                                a person authorised by the Company to receive it or where the
+                                disclosure is authorised under these Terms and Conditions. You are
+                                liable for any misuse of the Confidential Information by you.
+                            </p>
+                        </div>
+                        <div class="head9" id="restrictions-on-use-of-materials">
+                            <h3>Restrictions on Use of Materials</h3>
+                            <p>
+                                This Website is owned and operated by ConnectedLife Pte Ltd.
+                                Except as otherwise expressly permitted by HealthTrack SG, no
+                                Materials from this Website, operated, licensed or controlled by
+                                HealthTrack SG may be copied, reproduced, republished, uploaded,
+                                posted, transmitted, or distributed in any way. You may download
+                                Materials displayed on this Website for your use only, provided
+                                that you also retain all copyright and other proprietary notices
+                                contained on the Materials. You may not distribute, modify,
+                                transmit, reuse, repost, or use the content of this Website for
+                                public or commercial purposes, including the text, images, audio,
+                                and video without our prior written permission. We neither warrant
+                                nor represent that your use of Materials displayed on this Website
+                                will not infringe rights of third parties.
+                            </p>
+                        </div>
+
+                        <div class="head10" id="sending-of-messages">
+                            <h3>Sending of Messages</h3>
+                            <p>
+                                Certain portions of the Website offer you the ability to send and
+                                receive electronic mail messages (“email”). Email functionality,
+                                if any, is provided to you to facilitate communications between
+                                you and the Company. You should regularly access your mailbox to
+                                read your emails and ensure that old mails are archived and that
+                                your mailbox size is not exceeded. The Company shall have no
+                                liability for any loss or damage that results from:
+                            </p>
+                            <ul>
+                                <li>
+                                    Interception and / or unauthorised use by third parties of any
+                                    information you send by email or;
+                                </li>
+                                <li>Unaccepted email requests, orders or instructions or;</li>
+                                <li>
+                                    The Company not having received email requests, orders or
+                                    instructions even though it has been sent or;
+                                </li>
+                                <li>
+                                    You not receiving any of your emails for whatever reason
+                                    whatsoever or;
+                                </li>
+                                <li>
+                                    The deletion or removal of any of your emails by the Company as
+                                    part of its housekeeping process or;
+                                </li>
+                                <li>
+                                    The termination and deletion of your email accounts by the
+                                    Company for any reason whatsoever
+                                </li>
+                            </ul>
+                            <p>
+                                You must ensure that all Messages sent by you to the Company are
+                                timely, complete, and accurate. The Company has absolute
+                                discretion in deciding which requests, orders, or instructions can
+                                be made via email and the Company will inform a Customer if it
+                                rejects any requests, order or instructions sent by a Customer by
+                                email. If there is evidence that a Message has been corrupted by
+                                the Company or if any Message is identified or capable of being
+                                identified as being incorrect, you must re-transmit that Message
+                                as soon as practicable after becoming aware that the Message has
+                                been corrupted or is, or is capable of being, incorrect, together
+                                with a clear indication that it is a corrected Message. All
+                                Messages are effective only when they have been completely
+                                received by the Company and the responsibility is yours to ensure
+                                that the Message is received by the Company.
+                            </p>
+                        </div>
+                        <div class="head11" id="liability">
+                            <h3>Liability</h3>
+                            <p>
+                                The Company shall not be liable for any direct, indirect,
+                                incidental, special or consequential, punitive damages or economic
+                                loss, suffered as a result of:
+                            </p>
+                            <ul>
+                                <li>
+                                    The use of, misuse of or inability to use the Website (or any
+                                    other linked website) by you or anyone else;
+                                </li>
+                                <li>
+                                    Any malfunction, breakdown or error in the Website, howsoever
+                                    caused;
+                                </li>
+                                <li>
+                                    The Material on the Website or any information, data or material
+                                    from any other linked website;
+                                </li>
+                                <li>
+                                    Any cessation, suspension or termination of the Website
+                                    howsoever caused including any negligence in respect thereof,
+                                    even if the Company, its directors, employees or authorised
+                                    representatives have been advised of the possibility of such
+                                    damages, losses and/or expenses. In no event shall the Company’s
+                                    liability to you for all damages, losses (whether in contract or
+                                    tort including but not limited to negligence howsoever caused or
+                                    arising) exceed the amount paid by you, if any, for accessing
+                                    the Website.
+                                </li>
+                            </ul>
+                            <p>
+                                You must indemnify the Company, its directors, employees and
+                                agents and hold them indemnified, against:
+                            </p>
+                            <ul>
+                                <li>
+                                    All actions, claims, suits, proceedings, causes of action and
+                                    demands that are made by any person in connection with your use
+                                    (or misuse) of the Website or the Material; and
+                                </li>
+                                <li>
+                                    all losses, costs, expenses and damages incurred by the Company
+                                    in connection with a breach by you of any provision of these
+                                    Terms and Conditions.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="head12" id="acts-by-any-person">
+                            <h3>Acts by any person on your behalf</h3>
+                            <p>
+                                You are liable to the Company for any acts, failures or omissions
+                                (including negligence and any changes in the data comprising any
+                                Message), by any person used by you or acting on your behalf to
+                                transmit, log or process Messages as if they were your own acts,
+                                failures or omissions. For the purposes of these Terms and
+                                Conditions, any person appointed or engaged by you or used by you
+                                in this manner will be deemed to be your agent acting on your
+                                behalf.
+                            </p>
+                        </div>
+
+                        <div class="head13" id="hyperlinking">
+                            <h3>Hyperlinking</h3>
+                            <p>
+                                The Website may provide links to other websites or permit third
+                                parties to link to the Website. Links to or from a third party
+                                site, whether provided by the Company or not, do not imply an
+                                endorsement, approval, or verification of any content available on
+                                such third party sites by the Company nor the people who run or
+                                contribute to such sites. The Company is not responsible or liable
+                                for the accuracy or completeness of the content on any such third
+                                party sites. You access these third party websites at your own
+                                risk.
+                            </p>
+                        </div>
+
+                        <div class="head14" id="termination">
+                            <h3>Termination</h3>
+                            <p>
+                                Your access to the Website may be terminated by the Company in its
+                                sole discretion at any time without notice. The limitations of
+                                liability and disclaimers made by the Company in these Terms and
+                                Conditions will survive any termination of access to the Website.
+                            </p>
+                        </div>
+
+                        <div class="head15" id="what-personal-information-is-collected">
+                            <h3>What Personal Information is Collected</h3>
+                            <p>
+                                The Personal Information collected by the Company about you will
+                                depend on your use of the different functions available on the
+                                Website. If you visit the Website for any reason, including to
+                                read, browse, download information, or send Messages, our systems
+                                will record your server address, the date and time of your visit
+                                and Personal Information provided by you to the Company.
+                            </p>
+                        </div>
+                        <div class="head16" id="use-of-cookies">
+                            <h3>Use of Cookies</h3>
+                            <p>
+                                The Company reserves the right to use “cookies” so that we may
+                                track your preferences and usage patterns to allow for
+                                improvements to the Website and also for planning, product
+                                development, marketing and research purposes including
+                                improvements and enhancements in our service to you. We may also
+                                collect IP addresses to help us diagnose problems.
+                            </p>
+                        </div>
+                        <div class="head17" id="disclosure-of-personal-information">
+                            <h3>Disclosure of Personal Information</h3>
+                            <p>
+                                The Company may, in its absolute discretion, reveal or release
+                                your Personal Information to a third party where this is required
+                                or necessary.
+                            </p>
+                            <p>
+                                <b>Disclosure to Public Agencies</b> – HealthTrack SG will adhere
+                                to any requests to disclose personal data to public agencies,
+                                courts and law enforcement agencies when required for purposes of
+                                investigations or proceedings under the PDPA or other written law.
+                            </p>
+                        </div>
+                        <div class="head18" id="security-of-personal-information">
+                            <h3>Security of Personal Information</h3>
+                            <p>
+                                The Company has implemented suitable security processes and
+                                technologies to protect collected Personal Information and to
+                                protect it from incorrect use and unauthorised access.
+                            </p>
+                        </div>
+                        <div class="head19" id="marketing">
+                            <h3>Marketing</h3>
+                            <p>
+                                If you have provided your consent, the Company may use your
+                                information to keep you informed by post, telephone, e–mail, text
+                                messaging or other electronic means, about HealthTrack SG products
+                                and services which may be of interest to you. Your information may
+                                also be used for these purposes after your contract account has
+                                ended. However, you can contact us at any time to withdraw your
+                                consent for your information to be used for the above purposes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="container-1">
+            <div class="row">
+                <div class="bottomrow">
+                    <p>
+                        &copy; 2025 Copyright ConnectedLife Health Pte Ltd | All rights
+                        reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
