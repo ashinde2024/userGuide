@@ -1,0 +1,761 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&amp;family=Varela+Round&amp;display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        /* header css */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-weight: 300;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .banner {
+            width: 100%;
+            height: 30vw;
+            background-color: #f1f1f1;
+        }
+
+        .banner .heading {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+        }
+
+        .heading h1 {
+            font-size: 3vw;
+            font-weight: 500;
+        }
+
+        .heading span {
+            color: #f77c25;
+            font-size: 1.3vw;
+        }
+
+        .row {
+            width: 100%;
+            height: 100%;
+            padding: 0vw 7vw;
+        }
+
+        .navbar .row {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 1vw 7vw;
+            background-color: #f7f7f7;
+            box-shadow: 0 0 10px 0 #d9d9d9;
+        }
+
+        .navbar .logo {
+            width: 50%;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo img {
+            width: 20vw;
+        }
+
+        .container-1 {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media screen and (min-width: 768px) {
+            .mr-3 {
+                margin-top: -3em;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar .logo img {
+                width: 40vw;
+            }
+
+            .navbar .menu {
+                display: none;
+            }
+
+            .navbar .menu {
+                display: none;
+            }
+
+            .banner {
+                height: 50vw;
+                background-color: #e7e7e7;
+                background-image: none;
+
+                .heading span {
+                    font-size: 22px;
+                }
+
+                .heading h1 {
+                    font-size: 24px;
+                }
+            }
+
+
+
+        }
+
+        ::ng-deep {
+            .app-main div.mainBody {
+                margin: 0 !important;
+            }
+        }
+
+        /* actual body content css */
+        body {
+            font-family: "Fira Sans", sans-serif;
+        }
+
+        .rightcontent h2 {
+            font-size: 24px;
+            font-weight: 400;
+            padding-bottom: 1.5vw;
+        }
+
+        .rightcontent .subhead {
+            font-size: 18px;
+            padding-bottom: 1vw;
+        }
+
+        .rightcontent h3 {
+            font-size: 18px !important;
+            font-weight: 400;
+        }
+
+        .rightcontent p {
+            font-size: 18px !important;
+            font-weight: 300 !important;
+        }
+
+        .rightcontent h4 {
+            font-size: 18px;
+            font-weight: 400;
+            padding-bottom: 0.5vw;
+        }
+
+        .rightcontent ul {
+            padding-left: 2vw;
+        }
+
+        .rightcontent li {
+            font-size: 18px;
+            font-weight: 300;
+            padding-bottom: 1vw;
+        }
+
+        .rightcontent {
+            width: 100%;
+        }
+
+        .container-1 {
+            width: 100%;
+            height: 100%;
+        }
+
+        .row {
+            width: 100%;
+            height: 100%;
+            padding: 0vw 7vw;
+        }
+
+        .menu h4 a {
+            text-decoration: none;
+            color: #333333;
+            font-weight: 300;
+        }
+
+        .heading {
+            h1 {
+                font-size: 3vw;
+            }
+
+            span {
+                color: #f77c25;
+                font-size: 1.3vw;
+            }
+        }
+
+        .content {
+            width: 100%;
+            height: 100%;
+            padding: 2vw 0;
+            background-color: white;
+        }
+
+        .maincontent {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            gap: 3vw;
+
+            h3 {
+                font-size: 1.8vw;
+                padding-bottom: 1vw;
+            }
+
+            p {
+                font-size: 1.1vw;
+                padding-bottom: 2vw;
+            }
+        }
+
+        .leftcontent {
+            width: 50%;
+
+            .con {
+                display: flex;
+                flex-direction: column;
+                padding: 1vw;
+                background: aliceblue;
+            }
+
+            .con a {
+                font-size: 20px;
+                color: #3a3a3a;
+                text-decoration: none;
+                font-weight: 300;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .maincontent h3 {
+                font-size: 18px !important;
+                padding-bottom: 3vw;
+            }
+
+            .maincontent {
+                display: block;
+            }
+
+            .leftcontent {
+                display: none;
+            }
+
+            .maincontent p {
+                font-size: 18px !important;
+                padding-bottom: 4vw;
+            }
+        }
+
+
+        /* footer css */
+        .footer {
+            width: 100%;
+            background-color: #f77c25;
+            padding: 1vw 0;
+        }
+
+        .footer .bottomrow {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .footer {
+                padding: 2vw 0;
+            }
+        }
+
+        ol[type="1"]>li::marker {
+            font-weight: 500;
+        }
+
+        ol[type="a"]>li::marker {
+            font-weight: 300;
+            /* or bold if needed */
+        }
+    </style>
+</head>
+
+<body style="margin: 0; padding: 0">
+    <!-- header -->
+    <section class="navbar">
+        <div class="container-1">
+            <div class="row">
+                <div class="logo">
+                    <img src="./assets/HealthTrackSG.png" alt="" srcset="" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- sub-header -->
+    <section class="banner">
+        <div class="container-1">
+            <div class="row">
+                <div class="heading">
+                    <span>Programme Participation Agreement</span>
+                    <h1 style="font-weight: 500;">Programme Participation Agreement (“PPA")</h1>
+                    <h1 style="font-weight: 500;">HealthTrack SG Programme</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- actual body content -->
+    <section class="content">
+        <div class="container-1">
+            <div class="row">
+                <div class="maincontent">
+
+                    <div class="rightcontent">
+                        <div class="head1" id="terms-and-conditions">
+                            <p>Here are some key facts about the HealthTrack SG programme which is a digital health and
+                                wellness programme (referred to as the “HealthTrack SG Programme” or “Programme”)
+                                administered by Health Promotion Board (“HPB”) in collaboration with Google,
+                                ConnectedLife Pte Ltd (“ConnectedLife”) and Fullerton Health Pte Ltd (“Fullerton
+                                Health”) to help improve the management of chronic conditions through continuous
+                                monitoring of health and lifestyle habits via HealthTrack SG mobile application (the
+                                “App”). By tapping ‘Agree,’ you acknowledge that you understand and agree to participate
+                                in the HealthTrack SG Programme.</p>
+                            <p style="">
+                            <ul>
+                                <li>
+                                    Your participation is entirely voluntary. You can choose to withdraw at any time.
+                                </li>
+                                <li>
+                                    The Programme lasts for twelve (12) months, commencing from the date of your first
+                                    Doctor’s Consult. </li>
+                            </ul>
+                            </p>
+                            <p style="">
+                                As a participant, you are consenting to allow HPB to collect, use, and disclose your
+                                Programme Data (as defined hereafter) as outlined in this agreement.
+                            </p>
+                            <p style="">
+                                You may be prompted to provide consent to a new Programme Participation Agreement if
+                                there are changes to the Programme and you may be withdrawn from the Programme to the
+                                extent such PPA is not agreed upon.
+                            </p>
+                            <p>
+                            <h1 style="font-weight: 500;">About the Programme</h1>
+                            </p>
+                            <p style="">
+                                The Programme is a twelve (12)-month programme offered in partnership between HPB,
+                                Google, ConnectedLife, and Fullerton Health. It is a digital health and wellness
+                                programme that empowers patients and their doctors to examine how lifestyle changes can
+                                help patients manage their chronic conditions. Through the programme, participants will
+                                be able to track their health progress, gain a holistic view of their health, and
+                                receive personalised guidance through the use of a wearable device and the App.
+                            </p>
+                            <p style="">
+                                To participate in the Programme, you must meet the eligibility criteria and agree to
+                                this Programme Participation Agreement (PPA).
+                            </p>
+                            <p>
+                            <h1 style="font-weight: 500;">Eligibility criteria</h1>
+                            </p>
+                            <p style="">
+                                You are eligible to participate in the Programme if you:
+                            <ol type="i" style="margin-left: 3em;">
+                                <li>Are a Singapore Citizen or Permanent Resident between the age of 25 to 75 years old
+                                    with a valid Singpass account;</li>
+                                <li>Have been told by a healthcare provider to have any of the following conditions:
+                                    <ol type="a" style="margin-left: 2em;">
+                                        <li>High Blood Pressure (Hypertension) or High-normal Blood Pressure</li>
+                                        <li>Type 2 Diabetes Mellitus or Pre-Diabetes</li>
+                                        <li>Lipid Disorders/High Cholesterol </li>
+                                    </ol>
+                                </li>
+                                <li>Are comfortable with spoken and written English;</li>
+                                <li>Are comfortable using a supported health tracker during daily activities and sleep;
+                                </li>
+                                <li>Are using a smartphone with iOS 15 or Android 10 and above, compatible with the
+                                    HealthTrack SG App, HPB Healthy 365; and Fitbit app (if using a Fitbit device)</li>
+                                <li>Agree to the terms and conditions of the Programme.</li>
+                            </ol>
+                            </p>
+                            <p>
+                                HPB reserves the right to select participants based on Programme requirements and to
+                                discontinue participation for those who provide false information or do not meet
+                                eligibility requirements.
+                            </p>
+                            <p>
+                            <h1 style="font-weight: 500;">
+                                Programme Participation Requirements
+                            </h1>
+                            </p>
+                            <p style="">
+                                The Programme lasts for twelve (12) months, commencing from the date of successful
+                                onboarding. Onboarding is considered successful once all of the following steps have
+                                been fulfilled:
+                            <ol type="i" style="margin-left: 3em;">
+                                <li>Download the HealthTrack SG App; </li>
+                                <li>Complete Onboarding Survey within the HealthTrack SG App;</li>
+                                <li>Link a compatible wearable device to the HealthTrack SG App;</li>
+                                <li>Schedule and attend a medical consultation at any participating Fullterton Health
+                                    clinic to undergo the required blood tests and receive your first personalized
+                                    Wellness Plan from the assigned clinical doctor </li>
+                            </ol>
+                            </p>
+                            <p>
+                                The Programme requires active participation, which includes:
+                            <ol type="i" style="margin-left: 3em;">
+                                <li>Wear a supported wearable device* during daily activities and sleep</li>
+                                <li>Syncing your wearable device regularly with the HealthTrack SG App</li>
+                                <li>Interact with the HealthTrack SG App regularly to monitor your Wellness Score and
+                                    check Health Messages</li>
+                                <li>Participating in consultations with your assigned clinic’s healthcare professional,
+                                    who will have access to your
+                                    dashboard data</li>
+                                <li>Complete the biweekly Report Health Status in the HealthTrack SG App</li>
+                            </ol>
+                            </p>
+                            <p>
+                                * Participants must have a compatible health tracker to take part in HealthTrack SG.
+                                Those without an existing compatible device may purchase a Fitbit tracker at a
+                                discounted rate.
+                            </p>
+                            <p>
+                                Please note that you may be withdrawn from the HealthTrack SG programme if you (i) do
+                                not wear and sync your health tracker with the HealthTrack SG App and/or (ii) complete
+                                the biweekly Report Health Status in the HealthTrack SG App for more than 90days.
+                                Following programme withdrawal, future visits with your healthcare provider at Fullerton
+                                Health will not be part of the programme and you will no longer be eligible for any
+                                programme rewards.
+                            </p>
+                            <p>
+                            <h1 style="font-weight: 500;">
+                                Programme data collected
+                            </h1>
+                            </p>
+                            <p style="">
+                                By agreeing to participate in the Programme, you acknowledge that the information listed
+                                below (‘Programme Data’) will be collected under the Programme.
+                            </p>
+                            <p>
+                                This Programme Data will be transferred and stored in Singapore.
+                            </p>
+                            <p>
+                                <b>Programme Data</b> may include information such as the following data types:
+                            </p>
+                            <p>
+                                <b>Contact Information:</b> This may include information you provide as part of signing
+                                up for the Programme, such as your name, NRIC, age, sex, ethnicity, email address,
+                                contact number.
+                            </p>
+                            <p>
+                                <b>Singpass Data:</b> This may include information such as Singpass ID.
+                            </p>
+                            <p>
+                                <b>Lifestyle Data:</b> This may include information provided via the Onboarding Survey
+                                and the biweekly Report Health Status survey such as smoking status, alcohol, diet,
+                                stress levels.
+                            </p>
+                            <p>
+                                <b>Your Wearable Device app Data:</b> This may include information in the list below.
+                                You will be able to choose which fields to grant the app the ability to read and write
+                                during the setup process. Note that if you allow the app to read the fields listed
+                                below, you are also agreeing to share historical data for the past 90 days, if that data
+                                is available. Information requested to be shared includes:
+                            <ul>
+                                <li>Activity data like standing, walking, exercise time, distance</li>
+                                <li>Heart measurements like heart rate</li>
+                                <li>Sleep analysis</li>
+                            </ul>
+                            </p>
+                            <p style="">
+                                Sharing your Wearable Device app’s data is required to participate in the Programme.
+                            </p>
+                            <p>
+                                <b>Clinical Data:</b> This may include information you provide via the Onboarding Survey
+                                when you sign up for the Programme, and biweekly Report Health Status survey, such as
+                                blood pressure, resting heart rate, heart rate variability, fasting blood glucose,
+                                HbA1c, cholesterol, triglycerides, weight, BMI, waist circumference. For the avoidance
+                                of doubt, clinical data may also include biological and physical information recorded by
+                                your doctor or clinic assistants during your medical consultations.
+                            </p>
+                            <p>
+                                <b>Self-Reported Health Information: </b>This may include information you provide via
+                                the Onboarding Survey when setting up a HealthTrack SG account for the App, and
+                                information you provide through the biweekly Report Health Status survey received
+                                through the App.
+                            </p>
+                            <p>
+                                <b>App Engagement and Usage Data:</b> This may include information such as when and how
+                                frequently the app is used, syncing of wearable data, participation and responses to the
+                                biweekly Report Health Status survey, information about notifications received such as
+                                content, frequency, responses to notifications, user profile, device model, software,
+                                the App version, and any other relevant App-related logs.
+                            </p>
+                            <p>
+                            <h1 style="font-weight: 500;">
+                                What purposes may my Programme Data be used for?
+                            </h1>
+                            </p>
+                            <p style="">
+                                Your Programme Data will never be sold. The Programme Data that you share may be used to
+                                support, assess, and evaluate the Programme, including, for the following purposes:
+                            </p>
+                            <ul>
+                                <li>to provide you with services and functions of the Programme, including setting up
+                                    your account and managing your use and access, informing you about service updates,
+                                    and managing and providing guidance on lifestyle change,</li>
+                                <li>to identify and deliver Programme-related messages that may be of interest to you,
+                                </li>
+                                <li>to identify correlations between Programme Data collected and messages delivered as
+                                    part of the Programme, </li>
+                                <li>to inform you of Programme updates and announcements, which you can manage through
+                                    notifications or email preferences in the App,</li>
+                                <li>to inform you of changes to the Programme and deliver other important messages,</li>
+                                <li>to develop and refine the Programme, </li>
+                                <li>to understand overall Programme effectiveness and/or its impact on the healthcare
+                                    system in Singapore, </li>
+                                <li>to assist you with enquiries and obtaining your feedback, or</li>
+                                <li>to devise, organize, and implement — both independently and in collaboration with
+                                    any organizations — programmes and activities aimed at promoting good health and
+                                    healthy lifestyles among the people of Singapore; to conduct health education
+                                    programmes; and to engage in activities for the prevention or detection of diseases.
+                                    This includes providing support or assistance to any organization in devising,
+                                    organizing, and implementing these programmes or activities.</li>
+                            </ul>
+                            <P>
+                                If you decide to participate in the Programme, HPB or its subcontractors may use your
+                                Contact Information, such as your name and email address, to contact you to:
+                            </P>
+                            <P>
+                                1) obtain feedback on your experience with the Programme, wearable device, the App, and
+                                related matters, and/or
+                            </P>
+                            <P>
+                                2) inform you about research studies conducted by HPB. Joining these studies is entirely
+                                voluntary and will not affect your Programme participation. You can opt out of receiving
+                                future research study communications at any time.
+                            </P>
+                            <P>
+                            <h1 style="font-weight: 500;">
+                                Who will have access to my Programme Data?
+                            </h1>
+                            </P>
+                            <p style="">
+                                HPB, ConnectedLife and Fullerton Health will have access to the Programme Data described
+                                above.
+                            </p>
+                            <p>
+                                HPB may also share your Programme Data with the Government of the Republic of Singapore
+                                and all statutory boards performing a public function for all matters connected with the
+                                promotion of good health and healthy lifestyles among Singapore residents, including the
+                                formulation of policies, the creation of conditions and the provision of public
+                                facilities that are conducive to the promotion of good health and healthy lifestyles
+                                among Singapore residents.
+                            </p>
+                            <p>
+                                Further, HPB may use or disclose your Programme Data as allowed at law. For instance,
+                                HPB may use or disclose your Programme Data to third parties in the national interest.
+                            </p>
+                            <p>
+                            <h1 style="font-weight: 500;">
+                                What other terms must I know related to my participation in the Programme?
+                            </h1>
+                            </p>
+                            <p style="">
+                                When you participate in the Programme, you are required to comply with its Terms of Use,
+                                which are available at https://hpb.gov.sg/healthy-living/healthtracksg/terms. Please
+                                also be aware that your personal data will be processed in accordance with this PPA and
+                                the HPB’s Privacy Statement, accessible at
+                                https://hpb.gov.sg/healthy-living/healthtracksg/privacypolicy.
+                            </p>
+                            <p>
+                            <h1 style="font-weight: 500;">
+                                How long does my PPA last?
+                            </h1>
+                            </p>
+                            <ul style="">
+                                <li>
+                                    Your PPA remains valid from the moment you agree to participate until the Programme
+                                    ends. It covers any Programme Data collected during that period.
+                                </li>
+                                <li>
+                                    We may ask you to sign a new PPA if the Programme undergoes significant changes,
+                                    such as its structure, collected data categories, or how your data is used.
+                                </li>
+                            </ul>
+                            <p>
+                            <h1 style="font-weight: 500;">
+                                Are There Any Account Restrictions or Termination Conditions?
+                            </h1>
+                            </p>
+                            <p style="">
+                                The terms in this PPA allow HPB to restrict your account access if you do not comply
+                                with Programme requirements (listed in section above) or if your account becomes
+                                inactive.
+                            </p>
+                            <ul>
+                                <li><b>Remaining inactive:</b> If you stay inactive more than 90 days, you might be
+                                    withdrawn from the Programme. Please note that HPB reserves the right to withdraw
+                                    participants at its discretion and without prior notice. Any collected data will
+                                    still be stored and used as outlined in the PPA. </li>
+                                <li><b>During inactivity:</b> Some Programme Data may still be collected, stored, and
+                                    used under the current PPA. </li>
+                                <li>If intentional fraud or discrepancies are found, such as inaccurate BP or
+                                    cholesterol levels, your participation in the Programme may be terminated. Some
+                                    examples, but not limited to, of discrepancies include providing false information
+                                    about your health status, intentionally misrepresenting your activity levels, or
+                                    falsifying data related to your participation in the Programme.</li>
+                            </ul>
+                            <p>
+                            <h1 style="font-weight: 500;">
+                                What if I no longer want to participate?
+                            </h1>
+                            </p>
+                            <p style="">
+                                If you do not wish to continue with the Programme, you may withdraw by:
+                            </p>
+                            <p>
+                                <b>Deleting your HealthTrack SG account </b>
+                            </p>
+                            <ol type="i" style="margin-left: 3em;">
+                                <li>Go to My profile, followed by Privacy Policy on your HealthTrack SG App. Click
+                                    Delete Account to withdraw from the HealthTrack SG programme.</li>
+                                <li>Please note that simply uninstalling the HealthTrack SG App will not lead to
+                                    deletion of your account or associated Programme Data.</li>
+                            </ol>
+
+                            <p>
+                            <h1 style="font-weight: 500;">What happens when you withdraw?</h1>
+                            </p>
+                            <ul style="margin-top: 0em;;">
+                                <li><b>Programme access:</b> Your access to the Programme on the App will be terminated.
+                                </li>
+                                <li><b>Programme Data collection:</b> HPB will stop collecting your data after
+                                    withdrawal within 24 hours.</li>
+                                <li><b>Programme Data already collected:</b> HPB may keep and use data collected before
+                                    your withdrawal for as outlined in this PPA.</li>
+                            </ul>
+                            <p>
+                                Following programme withdrawal, future visits with your healthcare provider at Fullerton
+                                Health will not be part of the programme and you will no longer be eligible for rewards.
+                            </p>
+                            <p>
+                                Please also note that by withdrawing from the Programme, HPB will stop accessing any new
+                                Programme Data as outlined above.
+                            </p>
+                            <p>
+                            <h1 style="font-weight: 500;">Definitions</h1>
+                            </p>
+                            <ol type="A" style="margin-left: 2em;">
+                                <li><b style="text-decoration: underline;">ONBOARDING SURVEY</b>
+                                    <ol style="margin-top: 0em;">
+                                        <li style="font-size: 16px;font-weight: 400;">What is the Onboarding Survey?
+                                        </li>
+                                        <p>
+                                            The Onboarding Survey is a required step in the onboarding process within
+                                            the App that collects key
+                                            demographic, medical and lifestyle information to compute your baseline
+                                            Wellness Score.
+                                        </p>
+                                    </ol>
+                                </li>
+                                <li> <b style="text-decoration: underline;">REPORT HEALTH STATUS</b>
+                                    <ol style="margin-top: 0.0em;">
+                                        <li style="font-size: 16px;font-weight: 400;">
+                                            What is Report Health Status?
+                                        </li>
+                                        <p>
+                                            The Report Health Status is a self-reporting feature in the HealthTrack SG
+                                            app that collects lifestyle
+                                            (e.g. diet, smoking, alcohol and stress levels) and clinical (e.g. weight,
+                                            waist circumference, blood
+                                            tests [if any]) data to update your Wellness Score. It is accessible under
+                                            ‘My Workspace’.
+                                        </p>
+                                    </ol>
+                                </li>
+                                <li><b style="text-decoration: underline;">WELLNESS PLAN</b>
+                                    <ol style="margin-top: 0em;">
+                                        <li style="font-size: 16px;font-weight: 400;">
+                                            What is the Wellness Plan?
+                                        </li>
+                                        <p>
+                                            The Wellness Plan is a personalised care plan co-developed by you and your
+                                            doctor. Based on your
+                                            profile, preferences and health data, your doctor will recommend up to three
+                                            lifestyle actions for
+                                            you to try.
+                                        </p>
+                                    </ol>
+                                </li>
+                                <li><b style="text-decoration: underline;">WELLNESS SCORE</b>
+                                    <ol style="margin-top: 0em;">
+                                        <li style="font-size: 16px;font-weight: 400;">
+                                            What is the Wellness Score?
+                                        </li>
+                                        <p>
+                                            A Wellness Score is calculated to through a proprietary algorithm determined
+                                            by lifestyle parameters
+                                            of your wearable device such as step count, physical activity, sleep as well
+                                            as clinical data like
+                                            your heart rate and blood pressure to give you an indication of your overall
+                                            wellness and areas for
+                                            improvement.
+                                        </p>
+                                    </ol>
+                                </li>
+                            </ol>
+                            <p class="mr-3">
+                            <h1 style="font-weight: 500;">
+                                Have Questions?
+                            </h1>
+                            </p>
+                            <p style="margin-top: 0em;;">
+                                If you have questions about this PPA or the Programme in general, you can contact
+                                Programme Support via:
+                            </p>
+                            <ul>
+                                <li><b>Phone:</b> 1800 223 1313</li>
+                                <li><b>Email:</b> hpb_mailbox@hpb.gov.sg</li>
+                            </ul>
+                            <p>
+                                You can also review Frequently Asked Questions on the Programme webpage:
+                                www.healthtrack.gov.sg
+                            </p>
+                            <p style="margin-top: 0em;;">
+                            <h1 style="font-weight: 500;">
+                                Consent
+                            </h1>
+                            </p>
+                            <p style="margin-top: 0em;;">
+                                By tapping "Confirm" below, you agree that:
+                            </p>
+                            <ul style="margin-top: 0em;;">
+                                <li>You have carefully reviewed this PPA and understand all its terms.</li>
+                                <li>You are voluntarily joining the programme and agree to the terms of this PPA.</li>
+                                <li>You understand that your Programme Data will be collected, used, and disclosed as
+                                    described in the PPA. </li>
+                                <li>You understand that your Programme Data will only be used as outlined in the PPA.
+                                </li>
+                                <li>If you do not to how your data is handled, you can choose not to participate in the
+                                    Programme.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+</body>

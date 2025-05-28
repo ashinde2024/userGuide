@@ -37,7 +37,7 @@
 
     <style type="text/css">
       .dark-mode .bg-151211 {
-        background-color: black !important;
+        background-color: #000000 !important;
       }
       .dark-mode .color-fffffe {
         color: #fffffe !important;
@@ -45,7 +45,7 @@
 
       @media (prefers-color-scheme: dark) {
         html:not(.light-mode) .bg-151211 {
-          background-color: black !important;
+          background-color: #000000 !important;
         }
         html:not(.light-mode) .color-fffffe {
           color: #fffffe !important;
@@ -53,11 +53,16 @@
       }
 
       [data-ogsc] .bg-151211 {
-        background-color: black !important;
+        background-color: #000000 !important;
       }
       [data-ogsc] .color-fffffe {
         color: #fffffe !important;
       }
+@media (max-width: 768px) {
+      .paddingMobileWidth{
+        padding-left: 90px !important;
+      }
+    }
     </style>
 
     <meta name="color-scheme" content="light dark" />
@@ -131,13 +136,17 @@
       </style>
     <![endif]-->
   </head>
-  <body style="margin: 0; padding: 0">
+  <body style="margin: auto; padding: 0;min-width: 200px;border-radius: 0%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;">
     <div style="font-size: 0px; line-height: 1px; mso-line-height-rule: exactly; display: none; max-width: 0px; max-height: 0px; opacity: 0; overflow: hidden; mso-hide: all"></div>
     <center lang="en" dir="ltr" style="width: 100%; table-layout: fixed; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%">
-      <table class="bg-151211" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#151211" width="375.00" style="border-radius: 20px 20px 0px 0px; box-shadow: 0px -7px 22.5px rgba(0, 0, 0, 0.25); background-color: #151211; width: 375px; border-spacing: 0; font-family: Roboto, Tahoma, sans-serif; min-width: 375px; border-collapse: separate">
+      <table class="bg-151211" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#151211"  style="box-shadow: 0px -7px 22.5px rgba(0, 0, 0, 0.25); background-color: #151211; border-spacing: 0; font-family: Roboto, Tahoma, sans-serif; min-width: 300px; border-collapse: separate">
         <tr>
-          <td valign="top" width="100.00%" style="padding-top: 46px; padding-bottom: 94px; width: 100%; vertical-align: top">
-            <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="375.00" style="width: 375px; border-spacing: 0">
+          <td valign="top" width="100.00%" style="padding-top: 15px; padding-bottom: 94px; width: 100%; vertical-align: top">
+            <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="375.00" style="width: 100%; border-spacing: 0">
              
               <tr>
                 <td align="left" style="padding-top: 13px; padding-bottom: 8px; padding-left: 15px">
@@ -283,7 +292,7 @@
                 </td>
               </tr>
               <tr>
-                <td align="left" style="padding-top: 8.5px; padding-bottom: 4.5px; padding-left: 90.5px">
+                <td align="left" style="padding-top: 8.5px; padding-bottom: 4.5px; padding-left: 190.5px" class="paddingMobileWidth">
                   <img src="assets/image_caae3ed7.png" alt="a screenshot of the apple health data sharing app" width="177" style="max-width: initial; width: 177px; display: block" />
                 </td>
               </tr>

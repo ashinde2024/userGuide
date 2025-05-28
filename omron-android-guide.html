@@ -58,6 +58,17 @@
       [data-ogsc] .color-fffffe {
         color: #fffffe !important;
       }
+
+      @media (max-width: 768px) {
+      .paddingMobileWidth{
+        padding-left: 90px !important;
+      }
+    }
+      @media (max-width: 768px) {
+      .paddingMobileWidth1{
+        padding-left: 30px !important;
+      }
+    }
     </style>
 
     <meta name="color-scheme" content="light dark" />
@@ -131,13 +142,17 @@
       </style>
     <![endif]-->
   </head>
-  <body style="margin: 0; padding: 0">
+  <body style="margin: auto; padding: 0;min-width: 200px;border-radius: 0%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;">
     <div style="font-size: 0px; line-height: 1px; mso-line-height-rule: exactly; display: none; max-width: 0px; max-height: 0px; opacity: 0; overflow: hidden; mso-hide: all"></div>
     <center lang="en" dir="ltr" style="width: 100%; table-layout: fixed; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%">
-      <table class="bg-151211" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#151211" width="375.00" style="border-radius: 20px 20px 0px 0px; box-shadow: 0px -7px 22.5px rgba(0, 0, 0, 0.25); background-color: #151211; width: 375px; border-spacing: 0; font-family: Roboto, Tahoma, sans-serif; min-width: 375px; border-collapse: separate">
+      <table class="bg-151211" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#151211"  style="box-shadow: 0px -7px 22.5px rgba(0, 0, 0, 0.25); background-color: #151211; border-spacing: 0; font-family: Roboto, Tahoma, sans-serif; min-width: 300px; border-collapse: separate">
         <tr>
-          <td valign="top" width="100.00%" style="padding-top: 46px; padding-bottom: 33px; width: 100%; vertical-align: top">
-            <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="375.00" style="width: 375px; border-spacing: 0">
+          <td valign="top" width="100.00%" style="padding-top: 15px; padding-bottom: 33px; width: 100%; vertical-align: top">
+            <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="375.00" style="width: 100%; border-spacing: 0">
               
               <tr>
                 <td align="left" style="padding-top: 13px; padding-bottom: 8px; padding-left: 15px">
@@ -192,11 +207,7 @@
                 </td>
               </tr>
 
-              <tr>
-                <td align="center" style="padding-top: 4.5px; padding-bottom: 4.5px">
-                  <img src="assets/image_89e184b9.png" alt="a screenshot of an omron connect app on a phone" width="200" style="border: none; max-width: initial; object-fit: contain; width: 200px; display: block" />
-                </td>
-              </tr>
+              
               <tr>
                 <td align="left" style="padding-top: 4.5px; padding-bottom: 4.5px; padding-left: 15px">
                   <div width="100.00%" style="text-align: left; color: white; margin: 0; padding: 0; width: 100%; line-height: 22px; mso-line-height-rule: exactly">
@@ -208,7 +219,7 @@
               </tr>
               <tr>
                 <td align="center" style="padding-top: 4.5px; padding-bottom: 4.5px">
-                  <img src="assets/image_8c703d3e.png" alt="a screen shot of a cell phone that says select your device" width="206" style="max-width: initial; width: 206px; display: block" />
+                  <img src="assets/image_b42fc88a.png" alt="a screen shot of a cell phone that says select your device" width="206" style="max-width: initial; width: 206px; display: block" />
                 </td>
               </tr>
               <tr>
@@ -248,7 +259,7 @@
                 </td>
               </tr>
               <tr>
-                <td align="left" style="padding-top: 9px; padding-bottom: 8.5px; padding-left: 90.5px">
+                <td align="left" style="padding-top: 9px; padding-bottom: 8.5px; padding-left: 190.5px" class="paddingMobileWidth">
                   <img src="assets/image_8c0f68ba.png" alt="Image" width="177" style="max-width: initial; width: 177px; display: block" />
                 </td>
               </tr>
@@ -295,6 +306,7 @@
                         Navigate to:
                         <ul class="kombai-email-compat__list-with-padding-left" style="list-style-type: disc; margin: 0; padding-left: 1.5em">
                           <li style="font-size: 14px; font-weight: 500; text-align: left; line-height: 20px; mso-line-height-rule: exactly">Contents → Add Content</li>
+                          <img class="paddingMobileWidth1" src="assets/add_content.png" alt="a screenshot of a health connect data sharing app" width="177" style="max-width: initial; width: 177px; display: block;margin: 10px 0px;" />
                           <li><span style="font-size: 14px; font-weight: 300; text-align: left; line-height: 20px; mso-line-height-rule: exactly">Tap</span><span style="font-size: 14px; font-weight: 500; text-align: left; line-height: 20px; mso-line-height-rule: exactly"> Share Setting</span></li>
                         </ul>
                       </li>
@@ -303,7 +315,7 @@
                 </td>
               </tr>
               <tr>
-                <td align="left" style="padding-top: 12.5px; padding-bottom: 8.5px; padding-left: 90.5px">
+                <td align="left" style="padding-top: 12.5px; padding-bottom: 8.5px; padding-left: 190.5px" class="paddingMobileWidth">
                   <img src="assets/image_631428c.png" alt="a screenshot of a health connect data sharing app" width="177" style="max-width: initial; width: 177px; display: block" />
                 </td>
               </tr>
@@ -332,44 +344,21 @@
                 </td>
               </tr>
               <tr>
-                <td align="left" style="padding-top: 12.5px; padding-bottom: 8.5px; padding-left: 109.5px">
+                <td align="left" style="padding-top: 12.5px; padding-bottom: 8.5px; padding-left: 190.5px" class="paddingMobileWidth">
                   <img src="assets/image_77fda392.png" alt="a screenshot of an app that says allow omron connect to access health connect" width="177" style="max-width: initial; width: 177px; display: block" />
                 </td>
               </tr>
               <tr>
-                <td align="left" style="padding-top: 8.5px; padding-bottom: 4px; padding-left: 15px; padding-right: 22px">
-                  <p class="color-fffffe" width="100.00%" style="font-size: 16px; font-weight: 500; text-align: left; line-height: 24px; color: white; mso-line-height-rule: exactly; margin: 0; padding: 0; width: 100%">Step 7: Connecting Omron Connect with Google Fit.</p>
+                <td>
+                <ul>
+                  <li style="font-size: 14px;">
+                    Tap “Export All Data” to share your data with the app
+                  </li>
+                </ul>
                 </td>
               </tr>
               <tr>
-                <td align="left" style="padding-top: 4px; padding-bottom: 4px; padding-left: 15px; padding-right: 15px">
-                  <div class="color-fffffe" width="100.00%" style="font-size: 14px; font-weight: 300; text-align: left; line-height: 20px; color: white; mso-line-height-rule: exactly; margin: 0; padding: 0; width: 100%">
-                    <ul class="kombai-email-compat__list-with-padding-left" style="list-style-type: disc; margin: 0; padding-left: 1.5em">
-                      <li><span>Open </span><span style="font-size: 14px; font-weight: 500; text-align: left; line-height: 20px; mso-line-height-rule: exactly">Google Fit</span><span>.</span></li>
-                      <li><span style="font-size: 14px; font-weight: 500; text-align: left; line-height: 20px; mso-line-height-rule: exactly">Sign in</span><span> with your google account.</span></li>
-                      <li><span>Once you are in the app tap on </span><span style="font-size: 14px; font-weight: 500; text-align: left; line-height: 20px; mso-line-height-rule: exactly">“Sync Fit with Health Connect.”</span></li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td align="center" style="padding-top: 4px; padding-bottom: 2.5px">
-                  <img src="assets/image_d1fda5af.png" alt="a screenshot of the sync fit with health connect app" width="201" style="max-width: initial; width: 201px; display: block" />
-                </td>
-              </tr>
-              <tr>
-                <td align="left" style="padding-top: 2.5px; padding-bottom: 8.5px; padding-left: 15px; padding-right: 15px">
-                  <div class="color-fffffe" width="100.00%" style="font-size: 14px; font-weight: 300; text-align: left; line-height: 20px; color: white; mso-line-height-rule: exactly; margin: 0; padding: 0; width: 100%">
-                    <ul class="kombai-email-compat__list-with-padding-left" style="list-style-type: disc; margin: 0; padding-left: 1.5em">
-                      <li><span>Tap </span><span style="font-size: 14px; font-weight: 500; text-align: left; line-height: 20px; mso-line-height-rule: exactly">“Set up.”</span></li>
-                      <li><span>Tap on</span><span style="font-size: 14px; font-weight: 500; text-align: left; line-height: 20px; mso-line-height-rule: exactly"> “Allow All”</span><span> toggle to grant full health data access.</span><span style="font-size: 14px; font-weight: 300; text-align: left; line-height: 20px; font-style: italic; mso-line-height-rule: exactly"> (Note: If full access is not granted, your account will be blocked from connecting to Health Connect).</span></li>
-                      <li><span style="font-size: 14px; font-weight: 300; text-align: left; line-height: 20px; mso-line-height-rule: exactly">Tap </span><span style="font-size: 14px; font-weight: 500; text-align: left; line-height: 20px; mso-line-height-rule: exactly">“Allow”</span><span style="font-size: 14px; font-weight: 300; text-align: left; line-height: 20px; mso-line-height-rule: exactly"> button below.</span></li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td align="left" style="padding-top: 8.5px; padding-bottom: 4.5px; padding-left: 90.5px">
+                <td align="left" style="padding-top: 8.5px; padding-bottom: 4.5px; padding-left:190.5px" class="paddingMobileWidth">
                   <img src="assets/image_19bf50f0.png" alt="a screenshot of a phone screen showing the allow all button" width="177" style="max-width: initial; width: 177px; display: block" />
                 </td>
               </tr>
@@ -433,7 +422,7 @@
                 </td>
               </tr>
               <tr>
-                <td align="left" style="padding-top: 8.5px; padding-bottom: 4.5px; padding-left: 90.5px">
+                <td align="left" style="padding-top: 8.5px; padding-bottom: 4.5px; padding-left: 190.5px" class="paddingMobileWidth">
                   <img src="assets/image_c220bef1.png" alt="a phone screen that says allow all on it" width="177" style="max-width: initial; width: 177px; display: block" />
                 </td>
               </tr>
