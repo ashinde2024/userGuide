@@ -3,15 +3,13 @@
 <html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+     <link rel="stylesheet" href="assets/css/loader.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link
         href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&amp;family=Varela+Round&amp;display=swap"
         rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-              <meta name="x-apple-disable-message-reformatting" />
-                  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
     <style type="text/css">
         /* header css */
         * {
@@ -275,12 +273,19 @@
             }
         }
     </style>
-
 </head>
 
 <body style="margin: 0; padding: 0">
+    <div class="loading-window" id="loader">
+        <div class="loading-window-transparent-header"></div>
+        <div class="loading-window-content">
+            <img src="./assets/loading.gif" alt="" />
+            <span class="loading-window-label">Loading...</span>
+        </div>
+    </div>
+
     <!-- header -->
-    <section class="navbar">
+    <section class="navbar" id="navbar">
         <div class="container-1">
             <div class="row">
                 <div class="logo">
@@ -291,7 +296,7 @@
     </section>
 
     <!-- sub-header -->
-    <section class="banner">
+    <section class="banner" id="banner">
         <div class="container-1">
             <div class="row">
                 <div class="heading">
@@ -303,30 +308,30 @@
     </section>
 
     <!-- body content -->
-    <div lang="en" dir="ltr"
+    <div lang="en" dir="ltr" id="content"
         style="width: 100%; table-layout: fixed; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%">
         <div class="content">
             <div class="container-1">
                 <div class="row">
                     <div class="maincontent">
                         <div class="fusion-text fusion-text-3">
-                            
+
                             <p>
-                                This Privacy Policy (or “Policy”) describes practices of Health Promotion Board (HPB,
+                                This Privacy Policy (or "Policy") describes practices of Health Promotion Board (HPB,
                                 we, our or us) in connection with information we collect, use and disclose through
-                                "HealthTrack SG,” a health and wellness programme featuring a mobile application
-                                (“HealthTrack SG App”) used with a wearable device paired with the HealthTrack SG App
-                                (the “Programme”) offered by HPB, in partnership with Google, ConnectedLife and
+                                "HealthTrack SG," a health and wellness programme featuring a mobile application
+                                ("HealthTrack SG App") used with a wearable device paired with the HealthTrack SG App
+                                (the "Programme") offered by HPB, in partnership with Google, ConnectedLife and
                                 Fullerton Health. The Programme digital health and wellness programme that empowers
                                 patients and their doctors to examine how lifestyle changes can help patients manage
                                 their chronic conditions. Through the programme, participants will be able to track
                                 their health progress, gain a holistic view of their health, and receive personalised
                                 guidance through the use of a wearable device and the App. This Programme is available
-                                to Singapore residents with a valid Singpass account who have agreed to the “Programme
-                                Participation Agreement” (or “PPA”) in the HealthTrack SG Programme. The PPA is visible
+                                to Singapore residents with a valid Singpass account who have agreed to the "Programme
+                                Participation Agreement" (or "PPA") in the HealthTrack SG Programme. The PPA is visible
                                 in the HealthTrack SG App. The PPA further sets out the collection, use and/or
                                 disclosure of all data and/or information which is collected under the Programme (known
-                                as “Programme Data”).
+                                as "Programme Data").
                             </p>
                             <p>
                                 OBy using the Programme and/or providing us with your information, you consent to our
@@ -340,11 +345,11 @@
                             <p>
                                 We may collect two types of information when you use the HealthTrack SG App and if you
                                 participate in the Programme: Personal Information and Non-Personally Identifiable
-                                Information. When this Policy uses the term “Programme Data”, this includes both
+                                Information. When this Policy uses the term "Programme Data", this includes both
                                 Personal Information and Non-Personally Identifiable Information.
                             </p>
                             <p>
-                                By “Personal Information,” we mean data that is associated with an identifiable
+                                By "Personal Information," we mean data that is associated with an identifiable
                                 individual, such as a name, address
                                 or e-mail address. Personal Information includes, for example, personally identifiable
                                 Programme and demographic
@@ -354,7 +359,7 @@
                                 on your wearable device.
                             </p>
                             <p>
-                                By “Non-Personally-Identifiable Information,” we mean information that is not associated
+                                By "Non-Personally-Identifiable Information," we mean information that is not associated
                                 with an identifiable individual. Non-Personally-Identifiable information may include
                                 information which would otherwise be Personal Information, but which has been
                                 de-identified or aggregated.
@@ -502,7 +507,7 @@
                             </p>
                             <p>As stated in the PPA, you are free to change your mind and stop participating in the
                                 Programme at any time. You can withdraw from the Programme through the App by clicking
-                                “Delete Account” under My profile followed by Privacy Policy on your HealthTrack SG App
+                                "Delete Account" under My profile followed by Privacy Policy on your HealthTrack SG App
                                 or contacting HealthTrack SG support at the number listed below. Please note that simply
                                 uninstalling the HealthTrack SG App will not lead to deletion of your account or
                                 associated Programme Data.</p>
@@ -571,6 +576,7 @@
             </div>
         </div>
     </div>
+    <script src="assets/scripts/loader.js"></script>
 
 </body>
 
